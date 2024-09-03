@@ -1,0 +1,26 @@
+{
+  "name": "@qtin_dsmtr/prettier-config",
+  "version": "1.0.0",
+  "description": "Prettier configuration",
+  "main": ".prettierrc.js",
+  "scripts": {
+    "bump:indev": "npm version prerelease --preid=indev",
+    "bump:preprod": "npm version prerelease --preid=preprod",
+    "bump:patch": "npm version patch",
+    "bump:minor": "npm version minor",
+    "bump:major": "npm version major",
+    "publish:testing": "npm publish --access public --tag indev --dry-run",
+    "publish:indev": "npm publish --access public --tag indev",
+    "publish:preprod": "npm publish --access public --tag preprod",
+    "publish:prod": "npm publish --access public --tag latest"
+  },
+  "keywords": [],
+  "author": "Quentin Desmettre",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^3.3.3"
+  },
+  "files": [
+    ".prettierrc.js"
+  ]
+}

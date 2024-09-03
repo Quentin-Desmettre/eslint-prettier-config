@@ -1,0 +1,38 @@
+{
+  "name": "@qtin_dsmtr/eslint-config-vue",
+  "version": "1.0.0",
+  "description": "ESLint configuration for Vue3 projects",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .ts,.js,.vue --fix --max-warnings 0",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bump:indev": "npm version prerelease --preid=indev",
+    "bump:preprod": "npm version prerelease --preid=preprod",
+    "bump:patch": "npm version patch",
+    "bump:minor": "npm version minor",
+    "bump:major": "npm version major",
+    "publish:testing": "npm publish --access public --tag indev --dry-run",
+    "publish:indev": "npm publish --access public --tag indev",
+    "publish:preprod": "npm publish --access public --tag preprod",
+    "publish:prod": "npm publish --access public --tag latest"
+  },
+  "keywords": [],
+  "author": "Quentin Desmettre",
+  "license": "ISC",
+  "dependencies": {
+    "@qtin_dsmtr/eslint-config-ts": "^1.0.0",
+    "@vue/eslint-config-typescript": "^13.0.0",
+    "eslint-plugin-vue": "^9.28.0",
+    "vue-eslint-parser": "^9.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.2"
+  },
+  "peerDependencies": {
+    "eslint": "^8.57.0"
+  },
+  "files": [
+    "index.js",
+    ".eslintrc.js"
+  ]
+}
